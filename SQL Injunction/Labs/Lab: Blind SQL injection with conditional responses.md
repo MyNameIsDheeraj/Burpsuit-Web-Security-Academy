@@ -16,15 +16,15 @@ You can assume that the password only contains lowercase, alphanumeric character
 
 1. Visit the front page of the shop, and use Burp Suite to intercept and modify the request containing the `TrackingId` cookie. For simplicity, let's say the original value of the cookie is `TrackingId=xyz`.
 
-![2025-05-20_23-11.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-11.png)
+![2025-05-20_23-11.png](Lab_img/2025-05-20_23-11.png)
 
 1. Modify the `TrackingId` cookie, changing it to: `TrackingId=xyz' AND '1'='1` Verify that the `Welcome back` message appears in the response.
 
-![2025-05-20_23-12.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-12.png)
+![2025-05-20_23-12.png](Lab_img/2025-05-20_23-12.png)
 
 1. Now change it to: `TrackingId=xyz' AND '1'='2`Verify that the `Welcome back` message does not appear in the response. This demonstrates how you can test a single boolean condition and infer the result.
 
-![2025-05-20_23-12_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-12_1.png)
+![2025-05-20_23-12_1.png](Lab_img/2025-05-20_23-12_1.png)
 
 1. Now change it to: 
 
@@ -40,7 +40,7 @@ Verify that the condition is true, confirming that there is a table called `user
 TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator')='a 
 ```
 
-![2025-05-20_23-13.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-13.png)
+![2025-05-20_23-13.png](Lab_img/2025-05-20_23-13.png)
 
 Verify that the condition is true, confirming that there is a user called `administrator`.
 
@@ -52,7 +52,7 @@ TrackingId=xyz' AND (SELECT 'a' FROM users WHERE username='administrator' AND LE
 
 This condition should be true, confirming that the password is greater than 1 character in length.
 
-![2025-05-20_23-15.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-15.png)
+![2025-05-20_23-15.png](Lab_img/2025-05-20_23-15.png)
 
 1. Send a series of follow-up values to test different password lengths. Send: 
 
@@ -67,13 +67,13 @@ And so on. You can do this manually using Burp Repeater, since the length is lik
 1. After determining the length of the password, the next step is to test the character at each position to determine its value. This involves a much larger number of requests, so you need to
 use Burp Intruder. Send the request you are working on to Burp Intruder, using the context menu.
 
-![2025-05-20_23-15.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-15%201.png)
+![2025-05-20_23-15.png](Lab_img/2025-05-20_23-15%201.png)
 
-![2025-05-20_23-16.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-16.png)
+![2025-05-20_23-16.png](Lab_img/2025-05-20_23-16.png)
 
-![2025-05-20_23-17.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-17.png)
+![2025-05-20_23-17.png](Lab_img/2025-05-20_23-17.png)
 
-![2025-05-20_23-18.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-18.png)
+![2025-05-20_23-18.png](Lab_img/2025-05-20_23-18.png)
 
 1. In Burp Intruder, change the value of the cookie to: 
 
@@ -90,13 +90,13 @@ function to extract a single character from the password, and test it against a 
 TrackingId=xyz' AND (SELECT SUBSTRING(password,1,1) FROM users WHERE username='administrator')='§a§
 ```
 
-![2025-05-20_23-28.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-28.png)
+![2025-05-20_23-28.png](Lab_img/2025-05-20_23-28.png)
 
-![2025-05-20_23-29.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-29.png)
+![2025-05-20_23-29.png](Lab_img/2025-05-20_23-29.png)
 
-![2025-05-20_23-30.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-30.png)
+![2025-05-20_23-30.png](Lab_img/2025-05-20_23-30.png)
 
-![2025-05-20_23-30_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-30_1.png)
+![2025-05-20_23-30_1.png](Lab_img/2025-05-20_23-30_1.png)
 
 1. To test the character at each position, you'll need to send suitable payloads in the payload position that you've defined. You can assume that the password contains only lowercase
 alphanumeric characters. In the **Payloads** side panel, check that **Simple list** is selected, and under **Payload configuration** add the payloads in the range a - z and 0 - 9. You can select these easily using the **Add from list** drop-down.
@@ -109,22 +109,22 @@ alphanumeric characters. In the **Payloads** side panel, check that **Simple lis
 TrackingId=xyz' AND (SELECT SUBSTRING(password,2,1) FROM users WHERE username='administrator')='a
 ```
 
-![2025-05-20_23-30_2.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-30_2.png)
+![2025-05-20_23-30_2.png](Lab_img/2025-05-20_23-30_2.png)
 
-![2025-05-20_23-31_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-31_1.png)
+![2025-05-20_23-31_1.png](Lab_img/2025-05-20_23-31_1.png)
 
-![2025-05-20_23-32_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-32_1.png)
+![2025-05-20_23-32_1.png](Lab_img/2025-05-20_23-32_1.png)
 
 1. Launch the modified attack, review the results, and note the character at the second offset.
 2. Continue this process testing offset 3, 4, and so on, until you have the whole password.
 
-![2025-05-20_23-35.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-35.png)
+![2025-05-20_23-35.png](Lab_img/2025-05-20_23-35.png)
 
-![2025-05-20_23-37.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-37.png)
+![2025-05-20_23-37.png](Lab_img/2025-05-20_23-37.png)
 
 1. In the browser, click **My account** to open the login page. Use the password to log in as the `administrator` user.
 
-![2025-05-20_23-37_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20responses%201efc172892ad80cb8ec4f6c413c20d95/2025-05-20_23-37_1.png)
+![2025-05-20_23-37_1.png](Lab_img/2025-05-20_23-37_1.png)
 
 > Note
 For more advanced users, the solution described here could be made more elegant in various ways. For example, instead of iterating over every character, you could perform a binary search of the character space. Or you could create a single Intruder attack with two payload positions and the cluster bomb attack type, and work through all permutations of offsets and character values.

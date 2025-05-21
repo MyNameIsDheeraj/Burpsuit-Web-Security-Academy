@@ -8,23 +8,23 @@ To solve the lab, determine the number of columns returned by the query by perfo
 
 1. Use Burp Suite to intercept and modify the request that sets the product category filter.
 
-![2025-05-21_03-54.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_03-54.png)
+![2025-05-21_03-54.png](Lab_img/2025-05-21_03-54.png)
 
-![2025-05-21_03-55.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_03-55.png)
+![2025-05-21_03-55.png](Lab_img/2025-05-21_03-55.png)
 
 1. Modify the `category` parameter, giving it the value `'+UNION+SELECT+NULL--`. Observe that an error occurs.
 
-![2025-05-21_03-56.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_03-56.png)
+![2025-05-21_03-56.png](Lab_img/2025-05-21_03-56.png)
 
 1. `'+UNION+SELECT+NULL,NULL--`Modify the `category` parameter to add an additional column containing a null value:
 
-![2025-05-21_03-59.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_03-59.png)
+![2025-05-21_03-59.png](Lab_img/2025-05-21_03-59.png)
 
 1. Continue adding null values until the error disappears and the response includes additional content containing the null values.
 
-![2025-05-21_04-00.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_04-00.png)
+![2025-05-21_04-00.png](Lab_img/2025-05-21_04-00.png)
 
-![2025-05-21_04-00_1.png](Lab%20SQL%20injection%20UNION%20attack,%20determining%20the%20nu%201efc172892ad80c987f4fb6bb378d8f4/2025-05-21_04-00_1.png)
+![2025-05-21_04-00_1.png](Lab_img/2025-05-21_04-00_1.png)
 
 ### **Community solutions**
 
