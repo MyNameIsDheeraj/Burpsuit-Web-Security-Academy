@@ -26,7 +26,7 @@ You can find some useful payloads on our SQL injection cheat sheet.
     
     **Collaborator:** a person who works jointly on an activity or project; an associate.
     
-    - Burp Collaborator
+    - ## Burp Collaborator
         
         ## 🔍 What is Burp Collaborator?
         
@@ -117,7 +117,7 @@ You can find some useful payloads on our SQL injection cheat sheet.
         - **Burp Collaborator Documentation**: Detailed information on using and configuring Burp Collaborator.
         - **Getting Started with Burp Collaborator**: A step-by-step tutorial to help you begin using Collaborator effectively.
     
-    - Burp Collaborator **Step-by-Step Walkthrough**
+    - ## Burp Collaborator **Step-by-Step Walkthrough**
         
         ## 🧪 Step-by-Step Tutorial Overview
         
