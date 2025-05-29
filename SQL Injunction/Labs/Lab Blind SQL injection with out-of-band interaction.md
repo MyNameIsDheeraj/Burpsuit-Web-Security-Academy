@@ -25,7 +25,7 @@ You can find some useful payloads on our SQL injection cheat sheet.
 2. First, open Burp Collaborator and click on **Get Started** to generate a unique Burp Collaborator subdomain. Use this subdomain to perform the attack. If the target application is vulnerable, it will trigger a DNS lookup to the Burp Collaborator server. This DNS interaction confirms the presence of the vulnerability.
     
     **Collaborator:** a person who works jointly on an activity or project; an associate.
-    
+    ---
     - ## Burp Collaborator
         
         ## 🔍 What is Burp Collaborator?
