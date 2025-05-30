@@ -7,7 +7,7 @@
 
 Each lab folder typically contains:
 - 📝 `README.md` – Lab description and summary
-- 💣 `payloads.txt` – Tested SQLi payloads
+- 💣 `payloads` – Tested SQLi payloads
 - 📸 `screenshots/` – Screenshots of exploitation steps and results
 - 📂 Additional files as needed (e.g., Burp logs, notes)
 
