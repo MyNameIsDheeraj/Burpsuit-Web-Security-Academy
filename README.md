@@ -24,7 +24,12 @@ Each lab is designed to simulate a real-world SQLi scenario. Here's a non-exhaus
 5. **Lab 5** – Blind SQLi (Boolean and Time-based)
 6. **Lab 6** – Out-of-Band SQLi
 
-> 📂 Explore each folder inside `Labs/` to view write-ups, payloads, and screenshots.
+## 🧪 Explore the Labs
+
+Click below to explore detailed SQL Injection lab solutions with payloads and screenshots:
+
+👉 [🔬 Go to Labs Folder]([https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/tree/main/SQL%20Injunction/Labs](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/tree/main/SQL%20Injunction/Labs))
+
 
 ---
 
