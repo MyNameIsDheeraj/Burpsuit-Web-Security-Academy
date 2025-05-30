@@ -28,7 +28,7 @@ Each lab is designed to simulate a real-world SQLi scenario. Here's a non-exhaus
 
 Click below to explore detailed SQL Injection lab solutions with payloads and screenshots:
 
-👉 [🔬 Go to Labs Folder](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/tree/main/SQL%20Injunction/Labs](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/tree/main/SQL%20Injunction/Labs)
+👉 [🔬 Go to Labs Folder](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/tree/main/SQL%20Injunction/Labs)
 
 
 ---
