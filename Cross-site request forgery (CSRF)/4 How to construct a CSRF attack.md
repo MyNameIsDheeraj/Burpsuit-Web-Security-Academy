@@ -45,7 +45,9 @@ Burp Suite Professional makes this easy with a built-in tool:
 
 
 
-# 🧪 Lab Directory
 
-## 📂 [# 4.1 Lab: CSRF vulnerability with no defenses](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/blob/main/Cross-site%20request%20forgery%20(CSRF)/0%20Labs/4%201%20Lab%20CSRF%20vulnerability%20with%20no%20defenses.md)
+## 🖥️ [4.1 Lab: CSRF vulnerability with no defenses](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/blob/main/Cross-site%20request%20forgery%20(CSRF)/0%20Labs/4%201%20Lab%20CSRF%20vulnerability%20with%20no%20defenses.md)
+
+
+This lab contains the main source code files and exercises.
 
