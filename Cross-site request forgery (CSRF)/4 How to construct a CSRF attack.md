@@ -42,3 +42,10 @@ Burp Suite Professional makes this easy with a built-in tool:
     - Copy the generated HTML into a **web page**
     - Open it in a **browser where the user is logged in** to the target site
     - **Test** if the intended request is made and the desired action is completed
+
+# 📁 Project Overview
+
+<details>
+  <summary>📂 Source Code Folder</summary>
+
+  This folder contains the main application source code. It is organized as follows:
