@@ -43,9 +43,9 @@ Burp Suite Professional makes this easy with a built-in tool:
     - Open it in a **browser where the user is logged in** to the target site
     - **Test** if the intended request is made and the desired action is completed
 
-# 📁 Project Overview
 
-<details>
-  <summary>📂 Source Code Folder</summary>
 
-  This folder contains the main application source code. It is organized as follows:
+# 🧪 Lab Directory
+
+## 📂 [# 4.1 Lab: CSRF vulnerability with no defenses](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/blob/main/Cross-site%20request%20forgery%20(CSRF)/0%20Labs/4%201%20Lab%20CSRF%20vulnerability%20with%20no%20defenses.md)
+
