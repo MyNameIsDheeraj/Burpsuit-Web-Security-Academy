@@ -16,7 +16,7 @@ Cookie: session=2yQIDcpia41WrATfjPqvm9tOkDvkMvLm
 
 ## 🖥️ 9.1 Lab: CSRF where token validation depends on request method
 
-### ▶️ [Click Here](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/blob/main/Cross-site%20request%20forgery%20(CSRF)/Labs/9%201%20Lab%20CSRF%20where%20token%20validation%20depends%20on%20request%20method.md)
+### ▶️ [Click Here](https://github.com/MyNameIsDheeraj/Burpsuit-Web-Security-Academy/blob/main/Cross-site%20request%20forgery%20(CSRF)/Labs/09%201%20Lab%20CSRF%20where%20token%20validation%20depends%20on%20request%20method.md)
 
 
 This lab contains the main source code files and exercises.
