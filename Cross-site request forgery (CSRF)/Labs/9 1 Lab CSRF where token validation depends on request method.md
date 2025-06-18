@@ -38,9 +38,9 @@ Intercept the page using **Burp Suite**, log in with the given **username and pa
 - Open **Burp's browser** and log in to your account.
 - After logging in, navigate to the **email change page**.
 
-![2025-05-31_23-39.png](Labs%20Img/2025-05-31_23-39.png)
+![2025-05-31_23-39.png](../Img/2025-05-31_23-39.png)
 
-![2025-05-31_23-41.png](Labs%20Img/2025-05-31_23-41.png)
+![2025-05-31_23-41.png](../Img/2025-05-31_23-41.png)
 
 ### 2. Submit the "Update email" Form
 
@@ -50,11 +50,11 @@ Intercept the page using **Burp Suite**, log in with the given **username and pa
     - Send the request to **Burp Repeater**.
     - Modify the `csrf` parameter and observe that the request is **rejected**.
         
-        ![2025-05-31_23-41_1.png](Labs%20Img/2025-05-31_23-41_1.png)
+        ![2025-05-31_23-41_1.png](../Img/2025-05-31_23-41_1.png)
         
-        ![2025-05-31_23-41_2.png](Labs%20Img/2025-05-31_23-41_2.png)
+        ![2025-05-31_23-41_2.png](../Img/2025-05-31_23-41_2.png)
         
-        ![2025-05-31_23-42.png](Labs%20Img/2025-05-31_23-42.png)
+        ![2025-05-31_23-42.png](../Img/2025-05-31_23-42.png)
         
 
 ## 🔁 Convert the Request Method
@@ -70,13 +70,13 @@ Intercept the page using **Burp Suite**, log in with the given **username and pa
         - If it was, the target is **vulnerable**.
             
             
-            ![2025-05-31_23-43.png](Labs%20Img/2025-05-31_23-43.png)
+            ![2025-05-31_23-43.png](../Img/2025-05-31_23-43.png)
             
-            ![2025-05-31_23-44.png](Labs%20Img/2025-05-31_23-44.png)
+            ![2025-05-31_23-44.png](../Img/2025-05-31_23-44.png)
             
-            ![2025-05-31_23-44_1.png](Labs%20Img/2025-05-31_23-44_1.png)
+            ![2025-05-31_23-44_1.png](../Img/2025-05-31_23-44_1.png)
             
-            ![2025-05-31_23-44_2.png](Labs%20Img/2025-05-31_23-44_2.png)
+            ![2025-05-31_23-44_2.png](../Img/2025-05-31_23-44_2.png)
             
 
 > ✅ This confirms that the page is validating the CSRF token for POST requests, but not for GET requests — a critical flaw.
@@ -100,7 +100,7 @@ Intercept the page using **Burp Suite**, log in with the given **username and pa
 - Enable the **"Include auto-submit script"** checkbox.
 - Click **"Regenerate"**.
 
-![2025-05-31_23-58.png](Labs%20Img/2025-05-31_23-58.png)
+![2025-05-31_23-58.png](../Img/2025-05-31_23-58.png)
 
 ### 🆓 Using Burp Suite Community Edition
 
@@ -119,27 +119,27 @@ Use the following HTML template:
 
 - Go to the **exploit server**.
 
-![2025-06-01_00-01.png](Labs%20Img/2025-06-01_00-01.png)
+![2025-06-01_00-01.png](../Img/2025-06-01_00-01.png)
 
 - Paste your exploit HTML into the **"Body"** section and click **"Store"**.
     
-    ![2025-06-01_00-12.png](Labs%20Img/2025-06-01_00-12.png)
+    ![2025-06-01_00-12.png](../Img/2025-06-01_00-12.png)
     
 - Click **"View exploit"** to test it on yourself.
     - Check the resulting **HTTP request and response**.
 - Change the email address in your payload so it’s **not your own**.
 
-![2025-06-01_00-01_1.png](Labs%20Img/2025-06-01_00-01_1.png)
+![2025-06-01_00-01_1.png](../Img/2025-06-01_00-01_1.png)
 
 - **Store** the updated exploit.
 
-![2025-06-01_00-12_1.png](Labs%20Img/2025-06-01_00-12_1.png)
+![2025-06-01_00-12_1.png](../Img/2025-06-01_00-12_1.png)
 
 - Click **"Deliver to victim"** to solve the lab.
 
 ---
 
-## **Community solutions**
+## **🫂 Community solutions**
 
 > [**https://youtu.be/Rmpjoq7_tpE](https://youtu.be/Rmpjoq7_tpE)
 [https://youtu.be/TpriFEAMAqI](https://youtu.be/TpriFEAMAqI)**

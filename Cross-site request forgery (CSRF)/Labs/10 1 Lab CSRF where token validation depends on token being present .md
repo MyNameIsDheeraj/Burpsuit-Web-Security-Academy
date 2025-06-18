@@ -34,13 +34,13 @@ You can log in to your **own account** using the credentials below:
 - Submit the **"Update email"** form.
 - In **Burp Suite**, go to the **Proxy history** and locate the email change request.
 
-![2025-06-01_03-46.png](Labs%20Img/2025-06-01_03-46.png)
+![2025-06-01_03-46.png](../Img/2025-06-01_03-46.png)
 
-![2025-06-01_03-47.png](Labs%20Img/2025-06-01_03-47.png)
+![2025-06-01_03-47.png](../Img/2025-06-01_03-47.png)
 
-![2025-06-01_03-47_1.png](Labs%20Img/2025-06-01_03-47_1.png)
+![2025-06-01_03-47_1.png](../Img/2025-06-01_03-47_1.png)
 
-![2025-06-01_03-48.png](Labs%20Img/2025-06-01_03-48.png)
+![2025-06-01_03-48.png](../Img/2025-06-01_03-48.png)
 
 ### 🔁 2. Analyze the Request in Burp Repeater
 
@@ -49,9 +49,9 @@ You can log in to your **own account** using the credentials below:
     - Change its value → Observe the request is **rejected**.
     - **Delete the `csrf` parameter entirely** → Observe the request is **accepted**.
     
-    ![2025-06-01_03-49.png](Labs%20Img/2025-06-01_03-49.png)
+    ![2025-06-01_03-49.png](../Img/2025-06-01_03-49.png)
     
-    ![2025-06-01_03-50.png](Labs%20Img/2025-06-01_03-50.png)
+    ![2025-06-01_03-50.png](../Img/2025-06-01_03-50.png)
     
 
 ### 🔍 3. Verifying CSRF Token Dependency
@@ -72,9 +72,9 @@ Check whether the application is truly vulnerable:
 - Enable **“Include auto-submit script”**.
 - Click **“Regenerate”**.
 
-![2025-06-01_03-50_1.png](Labs%20Img/2025-06-01_03-50_1.png)
+![2025-06-01_03-50_1.png](../Img/2025-06-01_03-50_1.png)
 
-![2025-06-01_03-54.png](Labs%20Img/2025-06-01_03-54.png)
+![2025-06-01_03-54.png](../Img/2025-06-01_03-54.png)
 
 ### Using Burp Suite Community Edition
 
@@ -82,7 +82,7 @@ Use the following **HTML template**:
 
 ```html
 <form method="POST" action="https://YOUR-LAB-ID.web-security-academy.net/my-account/change-email">
-    <input type="hidden" name="$param1name" value="$param1value">
+    <input type="hidden" name="$param1name(csrf)" value="$param1value(csrf token)">
 </form>
 <script>
     document.forms[0].submit();
@@ -101,9 +101,9 @@ Use the following **HTML template**:
 - ❗ Change the **email address** in your payload to **something different** from your own.
 - Store the updated exploit and click **“Deliver to victim”** to solve the lab.
 
-![2025-06-01_03-55.png](Labs%20Img/2025-06-01_03-55.png)
+![2025-06-01_03-55.png](../Img/2025-06-01_03-55.png)
 
-![2025-06-01_03-56.png](Labs%20Img/2025-06-01_03-56.png)
+![2025-06-01_03-56.png](../Img/2025-06-01_03-56.png)
 
 ---
 
