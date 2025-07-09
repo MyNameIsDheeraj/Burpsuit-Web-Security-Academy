@@ -1,1 +1,0 @@
-# Lab 8: SameSite Strict bypass via client-side redirect
