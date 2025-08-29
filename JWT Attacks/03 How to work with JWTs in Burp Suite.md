@@ -34,14 +34,14 @@ You can use **Burp Inspector** to **view and decode** JWTs, then use the **JWT E
 - Look in **Proxy > HTTP history** for highlighted requests.
 - These are automatically flagged by the JWT Editor extension.
 
-![image.png](03%20How%20to%20work%20with%20JWTs%20in%20Burp%20Suite%2024fc172892ad802cb470f7bc4410c183/image.png)
+![image.png](Img/image.png)
 
 📌 To view the JWT contents:
 
 - Highlight sections of the token.
 - The **Inspector panel** will automatically decode it.
 
-![image.png](03%20How%20to%20work%20with%20JWTs%20in%20Burp%20Suite%2024fc172892ad802cb470f7bc4410c183/image%201.png)
+![image.png](Img/image%201.png)
 
 2️⃣ Review the decoded JWT in the Inspector panel.
 

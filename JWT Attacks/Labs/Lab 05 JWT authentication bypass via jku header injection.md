@@ -57,15 +57,15 @@ wiener:peter
 }
 ```
 
-![2025-08-29_06-15.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-15.png)
+![2025-08-29_06-15.png](LabImg/2025-08-29_06-15.png)
 
-![2025-08-29_06-16.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-16.png)
+![2025-08-29_06-16.png](LabImg/2025-08-29_06-16.png)
 
-![2025-08-29_06-18.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-18.png)
+![2025-08-29_06-18.png](LabImg/2025-08-29_06-18.png)
 
-![2025-08-29_06-19.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-19.png)
+![2025-08-29_06-19.png](LabImg/2025-08-29_06-19.png)
 
-![2025-08-29_06-21.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-21.png)
+![2025-08-29_06-21.png](LabImg/2025-08-29_06-21.png)
 
 ---
 
@@ -92,21 +92,21 @@ wiener:peter
     
     Send this request to **delete carlos** → 🏆 Lab solved!
     
-    ![2025-08-29_06-22.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-22.png)
+    ![2025-08-29_06-22.png](LabImg/2025-08-29_06-22.png)
     
-    ![2025-08-29_06-25.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_06-25.png)
+    ![2025-08-29_06-25.png](LabImg/2025-08-29_06-25.png)
     
-    ![2025-08-29_07-19.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-19.png)
+    ![2025-08-29_07-19.png](LabImg/2025-08-29_07-19.png)
     
-    ![2025-08-29_07-25.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-25.png)
+    ![2025-08-29_07-25.png](LabImg/2025-08-29_07-25.png)
     
-    ![2025-08-29_07-34.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-34.png)
+    ![2025-08-29_07-34.png](LabImg/2025-08-29_07-34.png)
     
-    ![2025-08-29_07-35.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-35.png)
+    ![2025-08-29_07-35.png](LabImg/2025-08-29_07-35.png)
     
-    ![2025-08-29_07-35_1.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-35_1.png)
+    ![2025-08-29_07-35_1.png](LabImg/2025-08-29_07-35_1.png)
     
-    ![2025-08-29_07-35_2.png](Lab%2005%20JWT%20authentication%20bypass%20via%20jku%20header%20in%2025ec172892ad8090a76fed2251f01c47/2025-08-29_07-35_2.png)
+    ![2025-08-29_07-35_2.png](LabImg/2025-08-29_07-35_2.png)
     
 
 ## **👉 Summary Table: Steps and Purpose**

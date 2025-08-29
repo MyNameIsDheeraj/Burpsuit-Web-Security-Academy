@@ -45,13 +45,13 @@ Password: peter
     
 8. ✅ Save the key.
     
-    ![2025-08-30_00-22.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-22.png)
+    ![2025-08-30_00-22.png](LabImg/2025-08-30_00-22.png)
     
-    ![2025-08-30_00-22-01.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-22-01.png)
+    ![2025-08-30_00-22-01.png](LabImg/2025-08-30_00-22-01.png)
     
-    ![2025-08-30_00-23.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-23.png)
+    ![2025-08-30_00-23.png](LabImg/2025-08-30_00-23.png)
     
-    ![2025-08-30_00-27.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-27.png)
+    ![2025-08-30_00-27.png](LabImg/2025-08-30_00-27.png)
     
 
 ---
@@ -76,17 +76,17 @@ Password: peter
     - ✅ Ensure **Don’t modify header** is selected.
 6. 🚀 Send the request → You should now have **access to the admin panel**.
     
-    ![2025-08-30_00-25.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-25.png)
+    ![2025-08-30_00-25.png](LabImg/2025-08-30_00-25.png)
     
-    ![2025-08-30_00-28.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-28.png)
+    ![2025-08-30_00-28.png](LabImg/2025-08-30_00-28.png)
     
-    ![2025-08-30_00-29.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-29.png)
+    ![2025-08-30_00-29.png](LabImg/2025-08-30_00-29.png)
     
-    ![2025-08-30_00-30.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-30.png)
+    ![2025-08-30_00-30.png](LabImg/2025-08-30_00-30.png)
     
-    ![2025-08-30_00-32.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-32.png)
+    ![2025-08-30_00-32.png](LabImg/2025-08-30_00-32.png)
     
-    ![2025-08-30_00-34.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-34.png)
+    ![2025-08-30_00-34.png](LabImg/2025-08-30_00-34.png)
     
 
 ---
@@ -102,9 +102,9 @@ Password: peter
 2. Send a request to this endpoint.
 3. 🎉 The lab is solved!
     
-    ![2025-08-30_00-34_1.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-34_1.png)
+    ![2025-08-30_00-34_1.png](LabImg/2025-08-30_00-34_1.png)
     
-    ![2025-08-30_00-34_2.png](Lab%2006%20JWT%20authentication%20bypass%20via%20kid%20header%20pa%2025ec172892ad8082a2f7e4c04ef2d5eb/2025-08-30_00-34_2.png)
+    ![2025-08-30_00-34_2.png](LabImg/2025-08-30_00-34_2.png)
     
 
 ---

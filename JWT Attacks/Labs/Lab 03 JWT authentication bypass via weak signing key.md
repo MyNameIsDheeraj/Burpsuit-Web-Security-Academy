@@ -24,7 +24,7 @@ Password: peter
 - Learn how to work with **JWTs in Burp Suite** 🐞 before starting.
 - Use **hashcat** 🐱‍💻 to brute-force the secret key (see *Brute-forcing secret keys using hashcat*).
     
-    ![2025-08-17_22-05.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-17_22-05.png)
+    ![2025-08-17_22-05.png](LabImg/2025-08-17_22-05.png)
     
 
 ---
@@ -82,13 +82,13 @@ If you run the command again, use:
 
 to display results.
 
-![2025-08-17_22-07.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-17_22-07.png)
+![2025-08-17_22-07.png](LabImg/2025-08-17_22-07.png)
 
-![2025-08-17_22-07_1.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-17_22-07_1.png)
+![2025-08-17_22-07_1.png](LabImg/2025-08-17_22-07_1.png)
 
-![2025-08-17_22-10.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-17_22-10.png)
+![2025-08-17_22-10.png](LabImg/2025-08-17_22-10.png)
 
-![2025-08-17_22-10_1.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-17_22-10_1.png)
+![2025-08-17_22-10_1.png](LabImg/2025-08-17_22-10_1.png)
 
 ---
 
@@ -141,17 +141,17 @@ sub: "wiener" → "administrator"
 
 - Send the request 🗑 → **Lab Solved!** 🎉
     
-    ![2025-08-29_01-53.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-53.png)
+    ![2025-08-29_01-53.png](LabImg/2025-08-29_01-53.png)
     
-    ![2025-08-29_01-54.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-54.png)
+    ![2025-08-29_01-54.png](LabImg/2025-08-29_01-54.png)
     
-    ![2025-08-29_01-55.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-55.png)
+    ![2025-08-29_01-55.png](LabImg/2025-08-29_01-55.png)
     
-    ![2025-08-29_01-55_1.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-55_1.png)
+    ![2025-08-29_01-55_1.png](LabImg/2025-08-29_01-55_1.png)
     
-    ![2025-08-29_01-55_2.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-55_2.png)
+    ![2025-08-29_01-55_2.png](LabImg/2025-08-29_01-55_2.png)
     
-    ![2025-08-29_01-56.png](Lab%2003%20JWT%20authentication%20bypass%20via%20weak%20signing%20%20250c172892ad8096a709cea2463d08bd/2025-08-29_01-56.png)
+    ![2025-08-29_01-56.png](LabImg/2025-08-29_01-56.png)
     
 
 ---

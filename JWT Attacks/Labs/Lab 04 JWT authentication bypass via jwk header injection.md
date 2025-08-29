@@ -36,7 +36,7 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 - Log in using `wiener:peter`.
 - Capture the **GET /my-account** request in **Burp Repeater**.
     
-    ![2025-08-29_04-19.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-19.png)
+    ![2025-08-29_04-19.png](LabImg/2025-08-29_04-19.png)
     
 
 ### 3️⃣ Test Admin Access
@@ -44,9 +44,9 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 - In **Repeater**, change the path to `/admin`.
 - Send the request → observe that **admin panel** is only accessible as `administrator`.
     
-    ![2025-08-29_04-20.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-20.png)
+    ![2025-08-29_04-20.png](LabImg/2025-08-29_04-20.png)
     
-    ![2025-08-29_04-22.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-22.png)
+    ![2025-08-29_04-22.png](LabImg/2025-08-29_04-22.png)
     
 
 ### 4️⃣ Generate a New RSA Key
@@ -55,13 +55,13 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 - Click **New RSA Key → Generate → OK**.
 - (No need to choose key size – it will update automatically).
     
-    ![2025-08-29_04-25.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-25.png)
+    ![2025-08-29_04-25.png](LabImg/2025-08-29_04-25.png)
     
-    ![2025-08-29_04-25_1.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-25_1.png)
+    ![2025-08-29_04-25_1.png](LabImg/2025-08-29_04-25_1.png)
     
-    ![2025-08-29_04-27.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-27.png)
+    ![2025-08-29_04-27.png](LabImg/2025-08-29_04-27.png)
     
-    ![2025-08-29_04-27_1.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-27_1.png)
+    ![2025-08-29_04-27_1.png](LabImg/2025-08-29_04-27_1.png)
     
 
 ### 5️⃣ Modify JWT Payload
@@ -73,7 +73,7 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 "sub": "administrator"
 ```
 
-![2025-08-29_04-28.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-28.png)
+![2025-08-29_04-28.png](LabImg/2025-08-29_04-28.png)
 
 ### 6️⃣ Embed Public Key via `jwk` Injection
 
@@ -81,7 +81,7 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 - Select your **RSA key** → Click **OK**.
 - ✅ A new `jwk` parameter is added to the JWT header (containing your public key).
     
-    ![2025-08-29_04-29.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-29.png)
+    ![2025-08-29_04-29.png](LabImg/2025-08-29_04-29.png)
     
 
 ### 7️⃣ Access Admin Panel
@@ -89,9 +89,9 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 - Send the modified request.
 - 🎉 You now have **admin access**.
     
-    ![2025-08-29_04-30.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-30.png)
+    ![2025-08-29_04-30.png](LabImg/2025-08-29_04-30.png)
     
-    ![2025-08-29_04-30_1.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-30_1.png)
+    ![2025-08-29_04-30_1.png](LabImg/2025-08-29_04-30_1.png)
     
 
 ### 8️⃣ Delete User Carlos
@@ -104,7 +104,7 @@ Familiarize yourself with **JWTs in Burp Suite** before attempting this lab.
 
 - Send request → ✅ Lab solved.
     
-    ![2025-08-29_04-30_2.png](Lab%2004%20JWT%20authentication%20bypass%20via%20jwk%20header%20in%2025dc172892ad8092b756d229079f6495/2025-08-29_04-30_2.png)
+    ![2025-08-29_04-30_2.png](LabImg/2025-08-29_04-30_2.png)
     
 
 ---

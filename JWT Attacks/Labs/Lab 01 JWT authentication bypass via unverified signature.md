@@ -35,9 +35,9 @@ Sign in using the given credentials ✅.
 - Find the **post-login `GET /my-account`** request.
 - Observe that your **session cookie is a JWT** 🔍.
     
-    ![2025-08-15_14-12.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_14-12.png)
+    ![2025-08-15_14-12.png](LabImg/2025-08-15_14-12.png)
     
-    ![2025-08-15_14-14.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_14-14.png)
+    ![2025-08-15_14-14.png](LabImg/2025-08-15_14-14.png)
     
 
 ---
@@ -49,7 +49,7 @@ Sign in using the given credentials ✅.
 - Notice that the **`sub` claim** contains your username 👤.
 - Send this request to **Burp Repeater** 📩.
     
-    ![image.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/image.png)
+    ![image.png](LabImg/image.png)
     
 
 ---
@@ -65,9 +65,9 @@ Sign in using the given credentials ✅.
 - Send the request 🚀.
 - Observe that **the admin panel is only accessible when logged in as the administrator user** 👑.
     
-    ![2025-08-15_14-44.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_14-44.png)
+    ![2025-08-15_14-44.png](LabImg/2025-08-15_14-44.png)
     
-    ![2025-08-15_14-45.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_14-45.png)
+    ![2025-08-15_14-45.png](LabImg/2025-08-15_14-45.png)
     
 
 ---
@@ -84,7 +84,7 @@ sub: "wiener" → "administrator"
 
 - Click **Apply changes** 🖱.
     
-    ![2025-08-15_14-58.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_14-58.png)
+    ![2025-08-15_14-58.png](LabImg/2025-08-15_14-58.png)
     
 
 ---
@@ -94,7 +94,7 @@ sub: "wiener" → "administrator"
 - Send the modified request again 📤.
 - Observe that you **now have access to the admin panel** 🏆.
     
-    ![2025-08-15_15-30.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_15-30.png)
+    ![2025-08-15_15-30.png](LabImg/2025-08-15_15-30.png)
     
 
 ---
@@ -110,11 +110,11 @@ sub: "wiener" → "administrator"
 - Send the request to this endpoint 🗑.
 - ✅ **Lab solved!**
     
-    ![2025-08-15_15-33.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_15-33.png)
+    ![2025-08-15_15-33.png](LabImg/2025-08-15_15-33.png)
     
-    ![2025-08-15_15-33_1.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_15-33_1.png)
+    ![2025-08-15_15-33_1.png](LabImg/2025-08-15_15-33_1.png)
     
-    ![2025-08-15_15-33_2.png](Lab%2001%20JWT%20authentication%20bypass%20via%20unverified%20si%2024fc172892ad80929c33c8afcb1c2b5d/2025-08-15_15-33_2.png)
+    ![2025-08-15_15-33_2.png](LabImg/2025-08-15_15-33_2.png)
     
 
 ---

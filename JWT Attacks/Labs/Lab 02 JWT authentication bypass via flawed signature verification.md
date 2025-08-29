@@ -35,9 +35,9 @@ Sign in with the provided credentials ✅.
 - Look at the **post-login `GET /my-account`** request.
 - Observe that your **session cookie is a JWT** 🔍.
     
-    ![2025-08-15_15-52.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_15-52.png)
+    ![2025-08-15_15-52.png](LabImg/2025-08-15_15-52.png)
     
-    ![2025-08-15_15-53.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_15-53.png)
+    ![2025-08-15_15-53.png](LabImg/2025-08-15_15-53.png)
     
 
 ---
@@ -62,7 +62,7 @@ Sign in with the provided credentials ✅.
 - Send the request 🚀.
 - Observe that **only the administrator** 👑 can access this panel.
     
-    ![2025-08-15_15-56.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_15-56.png)
+    ![2025-08-15_15-56.png](LabImg/2025-08-15_15-56.png)
     
 
 ---
@@ -77,7 +77,7 @@ sub: "wiener" → "administrator"
 
 - Click **Apply changes** 🖱.
     
-    ![2025-08-15_15-57.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_15-57.png)
+    ![2025-08-15_15-57.png](LabImg/2025-08-15_15-57.png)
     
 
 ---
@@ -93,7 +93,7 @@ none
 
 - Click **Apply changes** ✏️.
     
-    ![2025-08-15_15-57_1.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_15-57_1.png)
+    ![2025-08-15_15-57_1.png](LabImg/2025-08-15_15-57_1.png)
     
 
 ---
@@ -103,7 +103,7 @@ none
 - In the message editor, delete the **signature part** of the JWT.
 - **Important:** Leave the **trailing dot** (`.`) after the payload! ⚠️
     
-    ![2025-08-15_16-00.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_16-00.png)
+    ![2025-08-15_16-00.png](LabImg/2025-08-15_16-00.png)
     
 
 ---
@@ -113,7 +113,7 @@ none
 - Send the modified request 📤.
 - ✅ You have now successfully accessed the admin panel 🏆.
     
-    ![2025-08-15_16-00_1.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_16-00_1.png)
+    ![2025-08-15_16-00_1.png](LabImg/2025-08-15_16-00_1.png)
     
 
 ---
@@ -129,7 +129,7 @@ none
 - Send the request to this endpoint 🗑.
 - 🎉 **Lab solved!**
     
-    ![2025-08-15_16-00_2.png](Lab%2002%20JWT%20authentication%20bypass%20via%20flawed%20signat%20250c172892ad80d99fbeea358f070a35/2025-08-15_16-00_2.png)
+    ![2025-08-15_16-00_2.png](LabImg/2025-08-15_16-00_2.png)
     
 
 ---

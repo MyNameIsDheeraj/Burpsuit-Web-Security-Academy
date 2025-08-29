@@ -6,7 +6,7 @@ Since JWTs are widely used in **authentication**, **session management**, and **
 
 💡 Don’t worry if you’re new to JWTs — we’ll explain everything step-by-step, with **vulnerable labs** for safe, hands-on practice.
 
-![image.png](01%20What%20are%20JSON%20web%20tokens%20(JWTs)%2024ec172892ad804d8915f2bfb662b5df/image.png)
+![image.png](Img/imagemain.png)
 
 ---
 
@@ -95,7 +95,7 @@ Use [jwt.io](https://jwt.io/) to **decode & debug** tokens for better understand
 - **JWS (JSON Web Signature)**: JWT + Signature
 - **JWE (JSON Web Encryption)**: JWT + Encryption of contents
 
-![image.png](01%20What%20are%20JSON%20web%20tokens%20(JWTs)%2024ec172892ad804d8915f2bfb662b5df/image%201.png)
+![image.png](Img/image_1.png)
 
 💡 In practice:
 
