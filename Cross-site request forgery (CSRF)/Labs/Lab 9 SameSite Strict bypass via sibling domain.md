@@ -21,6 +21,13 @@
     - Open **Proxy > WebSockets history** in Burp.
     - 📨 Notice that the browser sends a `READY` message.
     - 📥 The server responds with the **entire chat history**.
+        
+        ![2025-08-17_19-28.png](LabImg/2025-08-17_19-28.png)
+        
+        ![2025-08-17_19-29.png](LabImg/2025-08-17_19-29.png)
+        
+        ![2025-08-17_19-30.png](LabImg/2025-08-17_19-30.png)
+        
 
 ---
 
@@ -56,6 +63,25 @@
 - 🍪 **Cookie restriction identified:**
     - The server sets cookies with `SameSite=Strict`.
     - ❌ Prevents sending cookies in cross-site WebSocket requests.
+        
+        ![2025-08-17_19-33.png](LabImg/2025-08-17_19-33.png)
+        
+        ![2025-08-17_19-34.png](LabImg/2025-08-17_19-34.png)
+        
+        ![2025-08-17_19-40.png](LabImg/2025-08-17_19-40.png)
+        
+        ![2025-08-17_19-57.png](LabImg/2025-08-17_19-57.png)
+        
+        ![2025-08-17_19-57_1.png](LabImg/2025-08-17_19-57_1.png)
+        
+        ![2025-08-17_19-59.png](LabImg/2025-08-17_19-59.png)
+        
+        ![2025-08-17_20-00.png](LabImg/2025-08-17_20-00.png)
+        
+        ![2025-08-17_20-01.png](LabImg/2025-08-17_20-01.png)
+        
+        ![2025-08-17_20-02.png](LabImg/2025-08-17_20-02.png)
+        
 
 ---
 
@@ -119,6 +145,19 @@
     - Go to Proxy > HTTP history.
     - Check the new `GET /chat` WebSocket request.
     - ✅ This time, the request **includes the session cookie**.
+        
+        ![2025-08-17_20-03.png](LabImg/2025-08-17_20-03.png)
+        
+        ![2025-08-17_20-05.png](LabImg/2025-08-17_20-05.png)
+        
+        ![2025-08-17_20-06.png](LabImg/2025-08-17_20-06.png)
+        
+        ![2025-08-17_20-07.png](LabImg/2025-08-17_20-07.png)
+        
+        ![2025-08-17_20-08.png](LabImg/2025-08-17_20-08.png)
+        
+        ![2025-08-17_20-08_1.png](LabImg/2025-08-17_20-08_1.png)
+        
 
 ---
 
@@ -132,6 +171,21 @@
     - Locate a message in the chat history with the **victim’s username and password**.
 - 🔓 **Log in as the victim.**
 - 🎉 **Lab Solved!**
+    
+    ![2025-08-17_20-11.png](LabImg/2025-08-17_20-11.png)
+    
+    ![2025-08-17_20-12.png](LabImg/2025-08-17_20-12.png)
+    
+    ![2025-08-17_20-15.png](LabImg/2025-08-17_20-15.png)
+    
+    ![2025-08-17_20-16.png](LabImg/2025-08-17_20-16.png)
+    
+    ![2025-08-17_20-19.png](LabImg/2025-08-17_20-19.png)
+    
+    ![2025-08-17_20-20.png](LabImg/2025-08-17_20-20.png)
+    
+    ![2025-08-17_20-20_1.png](LabImg/2025-08-17_20-20_1.png)
+    
 
 ---
 
